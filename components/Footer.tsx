@@ -26,6 +26,7 @@ export function Footer() {
                 ["/about", "About Us"],
                 ["/services", "Services"],
                 ["/contact", "Contact"],
+                ["/career", "Careers"],
               ].map(([href, label]) => (
                 <li key={href}>
                   <Link href={href} className="hover:text-white">
