@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-/** Transparent PNG at `public/images/wu-logo.png` (replace file to update artwork). */
-const LOGO_SRC = "/images/wu-logo.png";
+/** White / light mark: `public/images/wu-white-logo.png` */
+const LOGO_SRC = "/images/wu-white-logo.png";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -20,7 +20,7 @@ export function Header() {
           href="/"
           className="group flex min-w-0 items-center gap-3 leading-tight sm:gap-4"
         >
-          <span className="flex shrink-0 items-center">
+          <span className="flex shrink-0 items-center rounded-md bg-ink/90 px-2 py-1.5 sm:px-2.5 sm:py-2">
             <Image
               src={LOGO_SRC}
               alt="Wu's Bistro Group"
