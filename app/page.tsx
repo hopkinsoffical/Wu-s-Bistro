@@ -83,15 +83,15 @@ export default function HomePage() {
               />
             </svg>
 
-            <div className="relative z-[1] mx-auto w-full max-w-lg">
+            <div className="relative z-[1] mx-auto w-full max-w-[min(100%,20rem)] sm:max-w-xs lg:max-w-sm">
               <div className="rounded-2xl border-2 border-gold/45 bg-gradient-to-b from-shell via-white to-sea/10 p-2 shadow-[0_28px_60px_-18px_rgba(26,58,74,0.45)] ring-1 ring-sea/15">
-                <div className="relative aspect-[16/11] overflow-hidden rounded-xl bg-shell">
+                <div className="relative aspect-[2/3] overflow-hidden rounded-xl bg-shell">
                   <Image
                     src="/images/hero-huaiyang-banner.png"
                     alt="Xie Bao — Huaiyang cuisine and seafood; Wu's Bistro Group"
                     fill
-                    className="object-cover object-center [mask-image:radial-gradient(ellipse_82%_82%_at_50%_50%,#000_52%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_82%_82%_at_50%_50%,#000_52%,transparent_100%)]"
-                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-contain object-center [mask-image:radial-gradient(ellipse_78%_78%_at_50%_50%,#000_55%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_78%_78%_at_50%_50%,#000_55%,transparent_100%)]"
+                    sizes="(max-width: 1024px) 320px, 360px"
                     priority
                   />
                   {/* Inner vignette for softer edge blend */}
