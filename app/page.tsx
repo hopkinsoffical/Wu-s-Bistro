@@ -54,53 +54,16 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-md justify-self-center lg:max-w-none lg:justify-self-end">
-            {/* Lake ambience: soft water-colored glow */}
-            <div
-              className="pointer-events-none absolute -inset-8 top-[20%] rounded-[55%] bg-gradient-to-b from-sea/25 via-teal-800/15 to-transparent blur-3xl"
-              aria-hidden
-            />
-            <div
-              className="pointer-events-none absolute inset-x-4 bottom-0 h-[38%] rounded-[50%] bg-gradient-to-t from-sea/30 via-sea/10 to-transparent blur-2xl"
-              aria-hidden
-            />
-            {/* Shallow ripple line */}
-            <svg
-              className="pointer-events-none absolute -bottom-1 left-[8%] right-[8%] h-10 text-sea/35"
-              viewBox="0 0 400 48"
-              preserveAspectRatio="none"
-              aria-hidden
-            >
-              <path
-                fill="currentColor"
-                d="M0 28c40-12 80-12 120 0s80 12 120 0 80-12 120 0 40 12 40 12v8H0z"
-                opacity={0.45}
+          <div className="relative mx-auto w-full max-w-[min(100%,20rem)] justify-self-center sm:max-w-xs lg:max-w-md lg:justify-self-end">
+            <div className="relative aspect-[2/3] w-full">
+              <Image
+                src="/images/hero-huaiyang-banner.png"
+                alt="Xie Bao — Huaiyang cuisine and seafood; Wu's Bistro Group"
+                fill
+                className="object-contain object-center opacity-[0.97] [mask-image:radial-gradient(ellipse_100%_92%_at_68%_50%,#000_28%,#000_52%,transparent_80%)] [-webkit-mask-image:radial-gradient(ellipse_100%_92%_at_68%_50%,#000_28%,#000_52%,transparent_80%)]"
+                sizes="(max-width: 1024px) 320px, 420px"
+                priority
               />
-              <path
-                fill="currentColor"
-                d="M0 34c50-8 100-8 150 0s100 8 150 0 100-8 100 0v14H0z"
-                opacity={0.25}
-              />
-            </svg>
-
-            <div className="relative z-[1] mx-auto w-full max-w-[min(100%,20rem)] sm:max-w-xs lg:max-w-sm">
-              <div className="rounded-2xl border-2 border-gold/45 bg-gradient-to-b from-shell via-white to-sea/10 p-2 shadow-[0_28px_60px_-18px_rgba(26,58,74,0.45)] ring-1 ring-sea/15">
-                <div className="relative aspect-[2/3] overflow-hidden rounded-xl bg-shell">
-                  <Image
-                    src="/images/hero-huaiyang-banner.png"
-                    alt="Xie Bao — Huaiyang cuisine and seafood; Wu's Bistro Group"
-                    fill
-                    className="object-contain object-center [mask-image:radial-gradient(ellipse_78%_78%_at_50%_50%,#000_55%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_78%_78%_at_50%_50%,#000_55%,transparent_100%)]"
-                    sizes="(max-width: 1024px) 320px, 360px"
-                    priority
-                  />
-                  {/* Inner vignette for softer edge blend */}
-                  <div
-                    className="pointer-events-none absolute inset-0 rounded-xl shadow-[inset_0_0_60px_20px_rgba(250,248,244,0.55)]"
-                    aria-hidden
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </div>
