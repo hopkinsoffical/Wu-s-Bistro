@@ -28,7 +28,8 @@ export default function ContactPage() {
               info@WuBistro.com
             </a>
             <p className="mt-2 text-sm text-ink/60">
-              Holding company, data/AI engagements, vendor &amp; press.
+              Wu&apos;s Bistro Group — holding company, data/AI engagements,
+              vendor &amp; press.
             </p>
           </dd>
         </div>

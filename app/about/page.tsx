@@ -12,7 +12,7 @@ export default function AboutPage() {
           Built in the kitchen. Proven in the warehouse of data.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-ink/75">
-          Wu&apos;s Bistro pairs high-touch hospitality with an internal center of
+          Wu&apos;s Bistro Group pairs high-touch hospitality with an internal center of
           excellence for analytics, business intelligence, and AI engineering. Our
           operating brands—<strong className="text-ink">Xie Bao (蟹宝)</strong> and{" "}
           <strong className="text-ink">Wu&apos;s Fish House</strong>—celebrate coastal
@@ -52,7 +52,7 @@ export default function AboutPage() {
             Team & founder
           </h2>
           <p className="mt-4 leading-relaxed text-ink/75">
-            <strong className="text-ink">Homer Wu</strong> leads Wu&apos;s Bistro
+            <strong className="text-ink">Homer Wu</strong> leads Wu&apos;s Bistro Group
             as owner and steward of the Xie Bao concept—drawing on childhood
             memories of Jiangsu&apos;s crab-rich coast while building a
             contemporary, data-informed restaurant company in the United States.

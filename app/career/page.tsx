@@ -11,7 +11,7 @@ export default function CareerPage() {
               Careers
             </p>
             <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-              Find your role at Wu&apos;s Bistro
+              Find your role at Wu&apos;s Bistro Group
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-ink/75">
               Explore openings across{" "}

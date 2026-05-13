@@ -26,7 +26,7 @@ export default function ServicesPage() {
         Multi-unit dining, done with discipline
       </h1>
       <p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink/75">
-        Wu&apos;s Bistro operates{" "}
+        Wu&apos;s Bistro Group operates{" "}
         <strong className="text-ink">Xie Bao (蟹宝)</strong> and{" "}
         <strong className="text-ink">Wu&apos;s Fish House</strong> for guests who
         want coastal Chinese flavors in Manhattan, Flushing, and Edison. Below

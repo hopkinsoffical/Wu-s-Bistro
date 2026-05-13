@@ -10,7 +10,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-coral/10 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sea">
-            Wu&apos;s Bistro
+            Wu&apos;s Bistro Group
           </p>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl">
             Hospitality you can taste—operations you can measure.
@@ -55,7 +55,7 @@ export default function HomePage() {
               Company overview
             </h2>
             <p className="mt-4 leading-relaxed text-ink/75">
-              Wu&apos;s Bistro is a multi-unit hospitality group with an in-house
+              Wu&apos;s Bistro Group is a multi-unit hospitality group with an in-house
               analytics and engineering function. We operate{" "}
               <strong className="text-ink">Xie Bao (蟹宝)</strong> and{" "}
               <strong className="text-ink">Wu&apos;s Fish House</strong>. We are not

@@ -134,7 +134,7 @@ export function XieBaoStorySection({
                 xiebaousa.com
               </a>
               . Corporate formation and U.S. expansion milestones for Wu&apos;s
-              Bistro are summarized separately in{" "}
+              Bistro Group are summarized separately in{" "}
               <span className="font-medium text-ink">Founding & timeline</span>{" "}
               above.
             </p>

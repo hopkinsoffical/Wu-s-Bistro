@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <p className="font-display text-lg font-semibold text-white">
-              Wu&apos;s Bistro
+              Wu&apos;s Bistro Group
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-shell/75">
               Operator of Xie Bao (蟹宝) and Wu&apos;s Fish House in Manhattan,
@@ -76,7 +76,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-6 text-center text-xs text-shell/50">
-        © {new Date().getFullYear()} Wu&apos;s Bistro. All rights reserved.
+        © {new Date().getFullYear()} Wu&apos;s Bistro Group. All rights reserved.
       </div>
     </footer>
   );
