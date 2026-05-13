@@ -16,8 +16,8 @@ export function Header() {
           <span className="font-display text-lg font-semibold tracking-tight text-ink group-hover:text-sea sm:text-2xl">
             Wu&apos;s Bistro Group
           </span>
-          <span className="max-w-[min(100%,14rem)] text-[10px] font-medium uppercase leading-snug tracking-[0.12em] text-sea/80 sm:max-w-none sm:text-[11px] sm:tracking-[0.18em]">
-            Dining group · Data-driven · Product innovation
+          <span className="max-w-[min(100%,18rem)] text-[10px] font-medium leading-snug tracking-[0.06em] text-sea/85 sm:max-w-none sm:text-[11px] sm:tracking-[0.1em]">
+            Delicate Flavor, Timeless Tradition
           </span>
         </Link>
         <nav className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 text-sm font-medium text-ink/85">
