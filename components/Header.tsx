@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-/** Logo: JPEG has no alpha (was misnamed .png). Black matte uses mix-blend-screen on shell; replace with RGBA PNG anytime. */
-const LOGO_SRC = "/images/wu-logo.jpg";
+/** Transparent PNG at `public/images/wu-logo.png` (replace file to update artwork). */
+const LOGO_SRC = "/images/wu-logo.png";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -20,13 +20,14 @@ export function Header() {
           href="/"
           className="group flex min-w-0 items-center gap-3 leading-tight sm:gap-4"
         >
-          <span className="relative isolate h-11 w-[4.25rem] shrink-0 overflow-hidden rounded-lg border border-sea/10 bg-shell shadow-sm ring-1 ring-gold/15 sm:h-14 sm:w-[5.5rem]">
+          <span className="flex shrink-0 items-center">
             <Image
               src={LOGO_SRC}
               alt="Wu's Bistro Group"
-              fill
-              className="object-contain p-1 mix-blend-screen sm:p-1.5"
-              sizes="96px"
+              width={200}
+              height={200}
+              className="h-11 w-auto max-h-11 max-w-[5.25rem] object-contain object-left sm:h-14 sm:max-h-14 sm:max-w-[6.75rem]"
+              sizes="108px"
               priority
             />
           </span>

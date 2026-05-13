@@ -3,8 +3,7 @@ import Link from "next/link";
 import { XieBaoStorySection } from "@/components/XieBaoStorySection";
 import { RestaurantLocations } from "@/components/RestaurantLocations";
 
-/** Same logo JPEG; blend-screen on shell (see Header). */
-const LOGO_SRC = "/images/wu-logo.jpg";
+const LOGO_SRC = "/images/wu-logo.png";
 
 const aboutNav = [
   { href: "#philosophy", label: "Philosophy" },
@@ -59,17 +58,16 @@ export default function AboutPage() {
             carry that same discipline into data, reporting, and automation so
             every service can stay precise, warm, and consistent.
           </p>
-          <div className="mt-12 w-full max-w-xs rounded-2xl border border-sea/15 bg-shell p-6 shadow-lg shadow-black/10 ring-1 ring-gold/20 sm:max-w-sm sm:p-8">
-            <div className="relative isolate mx-auto aspect-[4/3] w-full max-w-[14rem] rounded-lg bg-shell sm:max-w-[16rem]">
-              <Image
-                src={LOGO_SRC}
-                alt="Wu's Bistro Group"
-                fill
-                className="object-contain mix-blend-screen"
-                sizes="(max-width: 640px) 100vw, 16rem"
-                priority
-              />
-            </div>
+          <div className="mt-12 flex justify-center px-2">
+            <Image
+              src={LOGO_SRC}
+              alt="Wu's Bistro Group"
+              width={240}
+              height={240}
+              className="h-36 w-auto max-w-[min(100%,16rem)] object-contain sm:h-44 sm:max-w-[18rem]"
+              sizes="(max-width: 640px) 256px, 288px"
+              priority
+            />
           </div>
         </div>
       </section>
