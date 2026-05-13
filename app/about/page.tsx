@@ -3,7 +3,8 @@ import Link from "next/link";
 import { XieBaoStorySection } from "@/components/XieBaoStorySection";
 import { RestaurantLocations } from "@/components/RestaurantLocations";
 
-const LOGO_SRC = "/images/wu-logo.png";
+/** Same logo JPEG; blend-screen on shell (see Header). */
+const LOGO_SRC = "/images/wu-logo.jpg";
 
 const aboutNav = [
   { href: "#philosophy", label: "Philosophy" },
@@ -59,12 +60,12 @@ export default function AboutPage() {
             every service can stay precise, warm, and consistent.
           </p>
           <div className="mt-12 w-full max-w-xs rounded-2xl border border-sea/15 bg-shell p-6 shadow-lg shadow-black/10 ring-1 ring-gold/20 sm:max-w-sm sm:p-8">
-            <div className="relative mx-auto aspect-[4/3] w-full max-w-[14rem] sm:max-w-[16rem]">
+            <div className="relative isolate mx-auto aspect-[4/3] w-full max-w-[14rem] rounded-lg bg-shell sm:max-w-[16rem]">
               <Image
                 src={LOGO_SRC}
                 alt="Wu's Bistro Group"
                 fill
-                className="object-contain"
+                className="object-contain mix-blend-screen"
                 sizes="(max-width: 640px) 100vw, 16rem"
                 priority
               />
