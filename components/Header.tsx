@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-/** Group mark; replace `public/images/wu'sbistro-logo.png` with your transparent PNG for best results on light UI. */
-const LOGO_SRC = "/images/wu'sbistro-logo.png";
+/** Group mark at `public/images/wu-logo.png` (transparent PNG recommended for light UI). */
+const LOGO_SRC = "/images/wu-logo.png";
 
 const nav = [
   { href: "/", label: "Home" },

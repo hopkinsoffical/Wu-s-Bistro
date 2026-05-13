@@ -3,7 +3,7 @@ import Link from "next/link";
 import { XieBaoStorySection } from "@/components/XieBaoStorySection";
 import { RestaurantLocations } from "@/components/RestaurantLocations";
 
-const LOGO_SRC = "/images/wu'sbistro-logo.png";
+const LOGO_SRC = "/images/wu-logo.png";
 
 const aboutNav = [
   { href: "#philosophy", label: "Philosophy" },
