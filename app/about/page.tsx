@@ -3,6 +3,8 @@ import Link from "next/link";
 import { XieBaoStorySection } from "@/components/XieBaoStorySection";
 import { RestaurantLocations } from "@/components/RestaurantLocations";
 
+const LOGO_SRC = "/images/wu'sbistro-logo.png";
+
 const aboutNav = [
   { href: "#philosophy", label: "Philosophy" },
   { href: "#story", label: "Our story" },
@@ -56,15 +58,17 @@ export default function AboutPage() {
             carry that same discipline into data, reporting, and automation so
             every service can stay precise, warm, and consistent.
           </p>
-          <div className="relative mt-12 h-28 w-28 overflow-hidden rounded-full border border-gold/25 bg-ink shadow-xl shadow-black/40 ring-2 ring-white/5 sm:h-36 sm:w-36">
-            <Image
-              src="/images/xiebaologo.png"
-              alt="Xie Bao — Wu&apos;s Bistro Group mark"
-              fill
-              className="object-cover object-center"
-              sizes="144px"
-              priority
-            />
+          <div className="mt-12 w-full max-w-xs rounded-2xl border border-sea/15 bg-shell p-6 shadow-lg shadow-black/10 ring-1 ring-gold/20 sm:max-w-sm sm:p-8">
+            <div className="relative mx-auto aspect-[4/3] w-full max-w-[14rem] sm:max-w-[16rem]">
+              <Image
+                src={LOGO_SRC}
+                alt="Wu's Bistro Group"
+                fill
+                className="object-contain"
+                sizes="(max-width: 640px) 100vw, 16rem"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>

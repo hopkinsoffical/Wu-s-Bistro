@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+/** Group mark; replace `public/images/wu'sbistro-logo.png` with your transparent PNG for best results on light UI. */
+const LOGO_SRC = "/images/wu'sbistro-logo.png";
+
 const nav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
@@ -17,13 +20,13 @@ export function Header() {
           href="/"
           className="group flex min-w-0 items-center gap-3 leading-tight sm:gap-4"
         >
-          <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border border-sea/15 bg-ink shadow-sm ring-1 ring-gold/20 sm:h-14 sm:w-14">
+          <span className="relative h-11 w-[4.25rem] shrink-0 overflow-hidden rounded-lg border border-sea/10 bg-shell shadow-sm ring-1 ring-gold/15 sm:h-14 sm:w-[5.5rem]">
             <Image
-              src="/images/xiebaologo.png"
-              alt="Wu&apos;s Bistro Group — Xie Bao mark"
+              src={LOGO_SRC}
+              alt="Wu's Bistro Group"
               fill
-              className="object-cover object-center"
-              sizes="56px"
+              className="object-contain p-1 sm:p-1.5"
+              sizes="96px"
               priority
             />
           </span>

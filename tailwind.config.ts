@@ -16,7 +16,7 @@ const config: Config = {
         gold: "#c9a227",
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+        sans: ['"Times New Roman"', "Times", "serif"],
         display: ["var(--font-display)", "Georgia", "serif"],
       },
     },
