@@ -22,6 +22,76 @@ function familyLabel(id: JobFamilyId) {
   return JOB_FAMILIES.find((f) => f.id === id)?.label ?? id;
 }
 
+/** Marriott-style JD: one narrative block; light typographic hierarchy only (no card grid). */
+function JobDescriptionBlock({ text }: { text: string }) {
+  const lines = text.split("\n");
+  const mainSections = new Set([
+    "JOB SUMMARY",
+    "CANDIDATE PROFILE",
+    "CORE WORK ACTIVITIES",
+  ]);
+  const subheads = new Set([
+    "Education and Experience",
+    "Required:",
+    "Preferred:",
+  ]);
+
+  return (
+    <div className="max-w-3xl text-[13px] leading-[1.75] text-ink/85">
+      {lines.map((line, i) => {
+        const t = line.trim();
+        if (t === "") {
+          return <div key={i} className="h-2 shrink-0" aria-hidden />;
+        }
+        if (mainSections.has(t)) {
+          return (
+            <h4
+              key={i}
+              className="mb-1 mt-8 text-[11px] font-bold uppercase tracking-[0.16em] text-sea first:mt-0"
+            >
+              {t}
+            </h4>
+          );
+        }
+        if (subheads.has(t)) {
+          return (
+            <p key={i} className="mb-1 mt-5 font-semibold text-ink">
+              {t}
+            </p>
+          );
+        }
+        const nextNonEmpty =
+          lines.slice(i + 1).find((l) => l.trim() !== "") ?? "";
+        const isActivityHead =
+          !line.trimStart().startsWith("•") &&
+          !mainSections.has(t) &&
+          !subheads.has(t) &&
+          nextNonEmpty.trimStart().startsWith("•");
+        if (isActivityHead) {
+          return (
+            <p key={i} className="mb-1 mt-6 font-semibold text-ink">
+              {line.trimStart()}
+            </p>
+          );
+        }
+        const isBullet = line.trimStart().startsWith("•");
+        return (
+          <p
+            key={i}
+            className={
+              isBullet
+                ? "mb-2 pl-4 -indent-3 [text-wrap:pretty]"
+                : "mb-2 [text-wrap:pretty]"
+            }
+          >
+            {line.trimStart()}
+          </p>
+        );
+      })}
+    </div>
+  );
+}
+
 function matchesEmployment(job: JobPosting, selected: Set<string>) {
   if (selected.size === 0) return true;
   if (selected.has("Full-time") && job.employmentType.startsWith("Full-time"))
@@ -87,7 +157,7 @@ export function CareersJobHub() {
       if (!matchesEmployment(job, employment)) return false;
       if (q) {
         const blob =
-          `${job.title} ${job.summary} ${job.locationLine}`.toLowerCase();
+          `${job.title} ${job.summary} ${job.locationLine} ${job.fullDescription}`.toLowerCase();
         if (!blob.includes(q)) return false;
       }
       return true;
@@ -308,32 +378,9 @@ export function CareersJobHub() {
                         id={`job-panel-${job.id}`}
                         role="region"
                         aria-labelledby={`job-trigger-${job.id}`}
-                        className="border-t border-sea/10 bg-[#fafbfc] px-5 py-6 sm:px-6"
+                        className="border-t border-sea/10 bg-[#fafbfc] px-5 py-6 sm:px-8"
                       >
-                        <p className="max-w-3xl text-sm leading-relaxed text-ink/80">
-                          {job.detail?.intro ?? job.summary}
-                        </p>
-                        {job.detail?.pillars?.length ? (
-                          <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                            {job.detail.pillars.map((p) => (
-                              <li
-                                key={p.head}
-                                className="rounded-lg border border-sea/10 bg-white p-4 shadow-sm"
-                              >
-                                <h4 className="text-sm font-semibold text-ink">
-                                  {p.head}
-                                </h4>
-                                <p className="mt-2 text-xs leading-relaxed text-ink/70">
-                                  {p.text}
-                                </p>
-                              </li>
-                            ))}
-                          </ul>
-                        ) : (
-                          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink/75">
-                            {job.summary}
-                          </p>
-                        )}
+                        <JobDescriptionBlock text={job.fullDescription} />
                       </div>
                     ) : null}
                   </article>
