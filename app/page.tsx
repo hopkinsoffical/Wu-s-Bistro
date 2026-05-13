@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { XieBaoStorySection } from "@/components/XieBaoStorySection";
-import { RestaurantLocations } from "@/components/RestaurantLocations";
 
 export default function HomePage() {
   return (
@@ -160,39 +159,6 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <div className="rounded-2xl bg-ink px-6 py-10 text-shell sm:px-10 sm:py-12">
-          <h2 className="font-display text-2xl font-semibold sm:text-3xl">
-            Simple contact
-          </h2>
-          <p className="mt-3 max-w-xl text-shell/75">
-            For partnerships, press, data & AI engagements, or guest services
-            routing, reach us directly.
-          </p>
-          <div className="mt-8 flex flex-col flex-wrap gap-4 text-sm sm:flex-row sm:items-center sm:gap-10">
-            <a
-              href="mailto:info@WuBistro.com"
-              className="font-semibold text-gold hover:underline"
-            >
-              info@WuBistro.com
-            </a>
-            <a href="tel:+12125550149" className="hover:text-white">
-              +1 (212) 555-0149
-            </a>
-          </div>
-          <p className="mt-8 text-xs font-semibold uppercase tracking-wider text-gold">
-            Four restaurant locations
-          </p>
-          <RestaurantLocations compact layout="grid" className="mt-4" />
-          <Link
-            href="/contact"
-            className="mt-8 inline-flex text-sm font-semibold text-white underline-offset-4 hover:underline"
-          >
-            Full contact page →
-          </Link>
         </div>
       </section>
     </div>
