@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { XieBaoStorySection } from "@/components/XieBaoStorySection";
 
@@ -7,48 +8,100 @@ export default function HomePage() {
       <section className="relative overflow-hidden border-b border-sea/10 bg-gradient-to-br from-shell via-white to-shell">
         <div className="pointer-events-none absolute -right-24 top-0 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
         <div className="pointer-events-none absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-coral/10 blur-3xl" />
-        <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sea">
-            Wu&apos;s Bistro Group
-          </p>
-          <h1 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl">
-            Hospitality you can taste—operations you can measure.
-          </h1>
-          <div className="mt-6 max-w-2xl space-y-5 text-lg leading-relaxed text-ink/75">
-            <p>
-              Founded by Dr. Wu, Wu&apos;s Bistro Group is dedicated to
-              preserving the tradition and craftsmanship of authentic
-              Huaiyang-style Chinese cuisine while delivering a warm and
-              memorable seafood dining experience. We proudly operate{" "}
-              <strong className="font-semibold text-ink">Xie Bao (蟹宝)</strong>{" "}
-              and{" "}
-              <strong className="font-semibold text-ink">
-                Wu&apos;s Fish House
-              </strong>{" "}
-              across{" "}
-              <strong className="font-semibold text-ink">Manhattan</strong>,{" "}
-              <strong className="font-semibold text-ink">Flushing</strong>, and{" "}
-              <strong className="font-semibold text-ink">Edison</strong>.
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-2 lg:gap-14">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sea">
+              Wu&apos;s Bistro Group
             </p>
-            <p>
-              Rooted in quality ingredients, hospitality, and regional culinary
-              heritage, our restaurants have earned strong community recognition
-              and a loyal customer following throughout New York and New Jersey.
-            </p>
+            <h1 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+              Hospitality you can taste—operations you can measure.
+            </h1>
+            <div className="mt-6 max-w-2xl space-y-5 text-lg leading-relaxed text-ink/75">
+              <p>
+                Founded by Dr. Wu, Wu&apos;s Bistro Group is dedicated to
+                preserving the tradition and craftsmanship of authentic
+                Huaiyang-style Chinese cuisine while delivering a warm and
+                memorable seafood dining experience. We proudly operate{" "}
+                <strong className="font-semibold text-ink">Xie Bao (蟹宝)</strong>{" "}
+                and{" "}
+                <strong className="font-semibold text-ink">
+                  Wu&apos;s Fish House
+                </strong>{" "}
+                across{" "}
+                <strong className="font-semibold text-ink">Manhattan</strong>,{" "}
+                <strong className="font-semibold text-ink">Flushing</strong>, and{" "}
+                <strong className="font-semibold text-ink">Edison</strong>.
+              </p>
+              <p>
+                Rooted in quality ingredients, hospitality, and regional culinary
+                heritage, our restaurants have earned strong community recognition
+                and a loyal customer following throughout New York and New Jersey.
+              </p>
+            </div>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center rounded-full bg-coral px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-coral/25 transition hover:bg-coral/90"
+              >
+                Explore services
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-sea/25 bg-white px-7 py-3 text-sm font-semibold text-ink transition hover:border-sea/50"
+              >
+                Contact us
+              </Link>
+            </div>
           </div>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/services"
-              className="inline-flex items-center justify-center rounded-full bg-coral px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-coral/25 transition hover:bg-coral/90"
+
+          <div className="relative mx-auto w-full max-w-md justify-self-center lg:max-w-none lg:justify-self-end">
+            {/* Lake ambience: soft water-colored glow */}
+            <div
+              className="pointer-events-none absolute -inset-8 top-[20%] rounded-[55%] bg-gradient-to-b from-sea/25 via-teal-800/15 to-transparent blur-3xl"
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute inset-x-4 bottom-0 h-[38%] rounded-[50%] bg-gradient-to-t from-sea/30 via-sea/10 to-transparent blur-2xl"
+              aria-hidden
+            />
+            {/* Shallow ripple line */}
+            <svg
+              className="pointer-events-none absolute -bottom-1 left-[8%] right-[8%] h-10 text-sea/35"
+              viewBox="0 0 400 48"
+              preserveAspectRatio="none"
+              aria-hidden
             >
-              Explore services
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-sea/25 bg-white px-7 py-3 text-sm font-semibold text-ink transition hover:border-sea/50"
-            >
-              Contact us
-            </Link>
+              <path
+                fill="currentColor"
+                d="M0 28c40-12 80-12 120 0s80 12 120 0 80-12 120 0 40 12 40 12v8H0z"
+                opacity={0.45}
+              />
+              <path
+                fill="currentColor"
+                d="M0 34c50-8 100-8 150 0s100 8 150 0 100-8 100 0v14H0z"
+                opacity={0.25}
+              />
+            </svg>
+
+            <div className="relative z-[1] mx-auto w-full max-w-lg">
+              <div className="rounded-2xl border-2 border-gold/45 bg-gradient-to-b from-shell via-white to-sea/10 p-2 shadow-[0_28px_60px_-18px_rgba(26,58,74,0.45)] ring-1 ring-sea/15">
+                <div className="relative aspect-[16/11] overflow-hidden rounded-xl bg-shell">
+                  <Image
+                    src="/images/hero-huaiyang-banner.png"
+                    alt="Xie Bao — Huaiyang cuisine and seafood; Wu's Bistro Group"
+                    fill
+                    className="object-cover object-center [mask-image:radial-gradient(ellipse_82%_82%_at_50%_50%,#000_52%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_82%_82%_at_50%_50%,#000_52%,transparent_100%)]"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    priority
+                  />
+                  {/* Inner vignette for softer edge blend */}
+                  <div
+                    className="pointer-events-none absolute inset-0 rounded-xl shadow-[inset_0_0_60px_20px_rgba(250,248,244,0.55)]"
+                    aria-hidden
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
