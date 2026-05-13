@@ -60,8 +60,18 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+12125550149" className="hover:text-white">
-                  +1 (212) 555-0149
+                <a href="tel:+17243906466" className="hover:text-white">
+                  +1 (724) 390-6466
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/xie_bao_crabhouse/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Instagram — @xie_bao_crabhouse ↗
                 </a>
               </li>
             </ul>

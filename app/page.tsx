@@ -14,20 +14,28 @@ export default function HomePage() {
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl">
             Hospitality you can taste—operations you can measure.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink/75">
-            We own and operate{" "}
-            <strong className="font-semibold text-ink">Xie Bao (蟹宝)</strong>{" "}
-            and <strong className="font-semibold text-ink">Wu&apos;s Fish House</strong>{" "}
-            across <strong className="font-semibold text-ink">Manhattan</strong>,{" "}
-            <strong className="font-semibold text-ink">Flushing</strong>, and{" "}
-            <strong className="font-semibold text-ink">Edison</strong>. Behind
-            the pass and across the business, we run a disciplined practice in{" "}
-            <strong className="font-semibold text-ink">
-              data analytics, business intelligence, AI automation, and software
-              services
-            </strong>{" "}
-            that power forecasting, reporting, and guest experience at scale.
-          </p>
+          <div className="mt-6 max-w-2xl space-y-5 text-lg leading-relaxed text-ink/75">
+            <p>
+              Founded by Dr. Wu, Wu&apos;s Bistro Group is dedicated to
+              preserving the tradition and craftsmanship of authentic
+              Huaiyang-style Chinese cuisine while delivering a warm and
+              memorable seafood dining experience. We proudly operate{" "}
+              <strong className="font-semibold text-ink">Xie Bao (蟹宝)</strong>{" "}
+              and{" "}
+              <strong className="font-semibold text-ink">
+                Wu&apos;s Fish House
+              </strong>{" "}
+              across{" "}
+              <strong className="font-semibold text-ink">Manhattan</strong>,{" "}
+              <strong className="font-semibold text-ink">Flushing</strong>, and{" "}
+              <strong className="font-semibold text-ink">Edison</strong>.
+            </p>
+            <p>
+              Rooted in quality ingredients, hospitality, and regional culinary
+              heritage, our restaurants have earned strong community recognition
+              and a loyal customer following throughout New York and New Jersey.
+            </p>
+          </div>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="/services"

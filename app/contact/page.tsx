@@ -64,13 +64,14 @@ export default function ContactPage() {
           </dt>
           <dd className="mt-2">
             <a
-              href="tel:+12125550149"
+              href="tel:+17243906466"
               className="text-lg font-semibold text-ink hover:text-coral"
             >
-              +1 (212) 555-0149
+              +1 (724) 390-6466
             </a>
             <p className="mt-2 text-sm text-ink/60">
-              Corporate placeholder line—use location-specific numbers from{" "}
+              Corporate line for Wu&apos;s Bistro Group. Location-specific
+              numbers are also listed on{" "}
               <a
                 href="https://xiebaousa.com/"
                 className="text-coral underline-offset-2 hover:underline"
@@ -78,8 +79,27 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
               >
                 xiebaousa.com
-              </a>{" "}
-              or your live PBX when available.
+              </a>
+              .
+            </p>
+          </dd>
+        </div>
+        <div>
+          <dt className="text-xs font-semibold uppercase tracking-wider text-sea">
+            Instagram
+          </dt>
+          <dd className="mt-2">
+            <a
+              href="https://www.instagram.com/xie_bao_crabhouse/"
+              className="text-lg font-semibold text-coral hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @xie_bao_crabhouse
+            </a>
+            <p className="mt-2 text-sm text-ink/60">
+              Follow Xie Bao for openings, specials, and behind-the-scenes from
+              our kitchens.
             </p>
           </dd>
         </div>
