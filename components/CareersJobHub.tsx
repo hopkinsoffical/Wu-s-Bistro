@@ -22,6 +22,17 @@ function familyLabel(id: JobFamilyId) {
   return JOB_FAMILIES.find((f) => f.id === id)?.label ?? id;
 }
 
+/** Which schedule types this posting supports (paired tags under job title). */
+function employmentFlags(employmentType: string) {
+  const t = employmentType.toLowerCase();
+  const partTime = /\bpart\s*[-]?\s*time\b/.test(t);
+  const fullTime = /\bfull\s*[-]?\s*time\b/.test(t);
+  if (fullTime || partTime) {
+    return { fullTime: fullTime || !partTime, partTime };
+  }
+  return { fullTime: true, partTime: false };
+}
+
 /** Marriott-style JD: one narrative block; light typographic hierarchy only (no card grid). */
 function JobDescriptionBlock({ text }: { text: string }) {
   const lines = text.split("\n");
@@ -334,6 +345,36 @@ export function CareersJobHub() {
                             {job.title}
                           </button>
                         </h3>
+                        {(() => {
+                          const { fullTime, partTime } = employmentFlags(
+                            job.employmentType,
+                          );
+                          return (
+                            <div
+                              className="mt-2 flex flex-wrap items-center gap-2"
+                              aria-label="Employment schedule"
+                            >
+                              <span
+                                className={`rounded-md border px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide ${
+                                  fullTime
+                                    ? "border-sea/30 bg-sea/10 text-ink"
+                                    : "border-sea/10 bg-white text-ink/35"
+                                }`}
+                              >
+                                Full-time
+                              </span>
+                              <span
+                                className={`rounded-md border px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide ${
+                                  partTime
+                                    ? "border-gold/50 bg-gold/15 text-ink"
+                                    : "border-sea/10 bg-white text-ink/35"
+                                }`}
+                              >
+                                Part-time
+                              </span>
+                            </div>
+                          );
+                        })()}
                         <p className="mt-2 text-sm text-ink/75">
                           {job.locationLine}
                         </p>
@@ -346,9 +387,6 @@ export function CareersJobHub() {
                               {tag}
                             </span>
                           ))}
-                          <span className="rounded-md border border-sea/15 px-2 py-0.5 text-xs font-medium text-ink/70">
-                            {job.employmentType}
-                          </span>
                           <span className="rounded-md border border-sea/15 px-2 py-0.5 text-xs text-ink/55">
                             Posted {formatPosted(job.postedAt)}
                           </span>
