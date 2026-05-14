@@ -14,15 +14,17 @@ export default function CareerPage() {
               Find your role at Wu&apos;s Bistro Group
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-ink/75">
-              Explore openings across{" "}
-              <strong className="text-ink">Business insights & analytics</strong>,{" "}
-              <strong className="text-ink">marketing & business development</strong>
-              , and{" "}
-              <strong className="text-ink">restaurant & field operations</strong>{" "}
-              for Xie Bao and Wu&apos;s Fish House in{" "}
-              <strong className="text-ink">Manhattan</strong>,{" "}
-              <strong className="text-ink">Flushing</strong>, and{" "}
-              <strong className="text-ink">Edison</strong>.
+              Wu&apos;s Bistro Group is a modern hospitality brand combining
+              authentic Huaiyang culinary tradition with data-driven operations,
+              customer experience innovation, and scalable restaurant management.
+              We are building a team that values operational excellence, market
+              awareness, creativity, and systems thinking — from front-of-house
+              hospitality to business analytics, digital growth, and
+              multi-location restaurant operations. Whether your background is in
+              culinary arts, service, technology, marketing, or analytics,
+              you&apos;ll have the opportunity to contribute to a fast-growing
+              restaurant group focused on innovation, efficiency, and
+              exceptional guest experiences.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
