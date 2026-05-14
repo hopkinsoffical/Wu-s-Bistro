@@ -1,7 +1,9 @@
 import Image from "next/image";
 
 const ORIGIN = "https://xiebaousa.com";
-const IMG_2025 = `${ORIGIN}/wp-content/uploads/2025/08`;
+
+const ABOUT_US_IMG_1 = "/images/food/aboutus-1.png";
+const ABOUT_US_IMG_2 = "/images/food/aboutus-2.png";
 
 const pillars = [
   {
@@ -57,8 +59,8 @@ export function XieBaoStorySection({
               >
                 xiebaousa.com
               </a>
-              . Photography is pulled from the same official WordPress media
-              library (2025 assets).
+              . The images below are high-resolution brand photos served from this
+              site.
             </p>
           </div>
           <a
@@ -74,8 +76,8 @@ export function XieBaoStorySection({
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           <figure className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-sea/10 bg-shell shadow-sm">
             <Image
-              src={`${IMG_2025}/aboutus-1.png`}
-              alt="Xie Bao USA — brand photography (official site)"
+              src={ABOUT_US_IMG_1}
+              alt="Xie Bao USA — brand photography"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -84,8 +86,8 @@ export function XieBaoStorySection({
           </figure>
           <figure className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-sea/10 bg-shell shadow-sm">
             <Image
-              src={`${IMG_2025}/aboutus-2.png`}
-              alt="Xie Bao USA — dining and culinary imagery (official site)"
+              src={ABOUT_US_IMG_2}
+              alt="Xie Bao USA — dining and culinary imagery"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
