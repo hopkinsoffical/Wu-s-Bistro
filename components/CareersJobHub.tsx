@@ -366,7 +366,7 @@ export function CareersJobHub() {
                               <span
                                 className={`rounded-md border px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide ${
                                   partTime
-                                    ? "border-gold/50 bg-gold/15 text-ink"
+                                    ? "border-sea/30 bg-sea/10 text-ink"
                                     : "border-sea/10 bg-white text-ink/35"
                                 }`}
                               >

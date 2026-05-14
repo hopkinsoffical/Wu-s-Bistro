@@ -413,7 +413,7 @@ export const JOB_POSTINGS: JobPosting[] = [
     familyId: "insights",
     locationLine: "Hybrid — NYC / NJ metro, with Edison anchor",
     regionTags: ["Hybrid", "NYC", "NJ", "Edison"],
-    employmentType: "Full-time",
+    employmentType: "Full-time / part-time",
     postedAt: "2026-01-15",
     featured: true,
     summary:
