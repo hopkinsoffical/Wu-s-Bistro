@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-/** White / light mark: `public/images/wu-white-logo.png` */
-const LOGO_SRC = "/images/wu-white-logo.png";
+import { SITE_LOGO_MARK_SRC } from "@/lib/site-logo";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -20,14 +18,14 @@ export function Header() {
           href="/"
           className="group flex min-w-0 items-center gap-3 leading-tight sm:gap-4"
         >
-          <span className="flex shrink-0 items-center rounded-md bg-ink/90 px-2 py-1.5 sm:px-2.5 sm:py-2">
+          <span className="flex shrink-0 items-center">
             <Image
-              src={LOGO_SRC}
+              src={SITE_LOGO_MARK_SRC}
               alt="Wu's Bistro Group"
-              width={200}
-              height={200}
-              className="h-11 w-auto max-h-11 max-w-[5.25rem] object-contain object-left sm:h-14 sm:max-h-14 sm:max-w-[6.75rem]"
-              sizes="108px"
+              width={512}
+              height={512}
+              className="h-[3.75rem] w-auto max-h-[3.75rem] max-w-[8.5rem] object-contain object-left sm:h-[4.75rem] sm:max-h-[4.75rem] sm:max-w-[11rem]"
+              sizes="(max-width: 640px) 136px, 176px"
               priority
             />
           </span>

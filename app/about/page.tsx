@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { XieBaoStorySection } from "@/components/XieBaoStorySection";
 import { RestaurantLocations } from "@/components/RestaurantLocations";
-
-const LOGO_SRC = "/images/wu-white-logo.png";
+import { SITE_LOGO_LIGHT_SRC } from "@/lib/site-logo";
 
 const aboutNav = [
   { href: "#philosophy", label: "Philosophy" },
@@ -60,12 +59,12 @@ export default function AboutPage() {
           </p>
           <div className="mt-12 flex justify-center px-2">
             <Image
-              src={LOGO_SRC}
+              src={SITE_LOGO_LIGHT_SRC}
               alt="Wu's Bistro Group"
-              width={240}
-              height={240}
-              className="h-36 w-auto max-w-[min(100%,16rem)] object-contain sm:h-44 sm:max-w-[18rem]"
-              sizes="(max-width: 640px) 256px, 288px"
+              width={512}
+              height={512}
+              className="h-44 w-auto max-w-[min(100%,20rem)] object-contain sm:h-52 sm:max-w-[22rem]"
+              sizes="(max-width: 640px) 320px, 352px"
               priority
             />
           </div>
