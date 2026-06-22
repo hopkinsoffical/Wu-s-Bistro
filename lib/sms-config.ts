@@ -1,9 +1,9 @@
-/** SMS reservation line — update when Twilio assigns your toll-free number. */
+/** SMS reservation line (Twilio toll-free). */
 export const SMS_RESERVATION_PHONE_E164 =
-  process.env.NEXT_PUBLIC_SMS_RESERVATION_PHONE ?? "+18000000000";
+  process.env.NEXT_PUBLIC_SMS_RESERVATION_PHONE ?? "+18776001886";
 
 export const SMS_RESERVATION_PHONE_DISPLAY =
-  process.env.NEXT_PUBLIC_SMS_RESERVATION_PHONE_DISPLAY ?? "(800) XXX-XXXX";
+  process.env.NEXT_PUBLIC_SMS_RESERVATION_PHONE_DISPLAY ?? "(877) 600-1886";
 
 /** Keyword guests text to start a reservation conversation (case-insensitive). */
 export const SMS_RESERVE_KEYWORD = "RESERVE";
