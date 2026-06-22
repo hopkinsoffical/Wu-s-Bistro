@@ -24,6 +24,7 @@ export function Footer() {
               {[
                 ["/", "Home"],
                 ["/about", "About Us"],
+                ["/booking", "Reservations"],
                 ["/services", "Services"],
                 ["/contact", "Contact"],
                 ["/career", "Careers"],
@@ -86,7 +87,23 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-6 text-center text-xs text-shell/50">
-        © {new Date().getFullYear()} Wu&apos;s Bistro Group. All rights reserved.
+        <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+          <Link href="/privacy" className="hover:text-shell/80">
+            Privacy
+          </Link>
+          <span aria-hidden="true">·</span>
+          <Link href="/terms" className="hover:text-shell/80">
+            Terms
+          </Link>
+          <span aria-hidden="true">·</span>
+          <Link href="/sms-compliance" className="hover:text-shell/80">
+            SMS policy
+          </Link>
+        </p>
+        <p className="mt-3">
+          © {new Date().getFullYear()} Wu&apos;s Bistro Group. All rights
+          reserved.
+        </p>
       </div>
     </footer>
   );

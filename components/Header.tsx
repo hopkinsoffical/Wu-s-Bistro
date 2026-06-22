@@ -5,6 +5,7 @@ import { SITE_LOGO_MARK_SRC } from "@/lib/site-logo";
 const nav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
+  { href: "/booking", label: "Reservations" },
   { href: "/services", label: "Services" },
   { href: "/career", label: "Careers" },
   { href: "/contact", label: "Contact" },

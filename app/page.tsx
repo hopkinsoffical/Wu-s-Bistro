@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { XieBaoStorySection } from "@/components/XieBaoStorySection";
+import {
+  SMS_RESERVATION_PHONE_DISPLAY,
+  SMS_RESERVE_KEYWORD,
+} from "@/lib/sms-config";
 
 export default function HomePage() {
   return (
@@ -40,8 +44,14 @@ export default function HomePage() {
             </div>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                href="/services"
+                href="/booking"
                 className="inline-flex items-center justify-center rounded-full bg-coral px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-coral/25 transition hover:bg-coral/90"
+              >
+                Book a table
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center rounded-full border border-sea/25 bg-white px-7 py-3 text-sm font-semibold text-ink transition hover:border-sea/50"
               >
                 Explore services
               </Link>
@@ -52,6 +62,18 @@ export default function HomePage() {
                 Contact us
               </Link>
             </div>
+            <p className="mt-5 max-w-xl text-sm leading-relaxed text-ink/60">
+              Text{" "}
+              <strong className="font-semibold text-ink">{SMS_RESERVE_KEYWORD}</strong>{" "}
+              to{" "}
+              <strong className="font-semibold text-ink">
+                {SMS_RESERVATION_PHONE_DISPLAY}
+              </strong>{" "}
+              to reserve via SMS.{" "}
+              <Link href="/booking" className="text-coral hover:underline">
+                See reservation options →
+              </Link>
+            </p>
           </div>
 
           <div className="relative mx-auto w-full max-w-[min(100%,20rem)] justify-self-center sm:max-w-xs lg:max-w-md lg:justify-self-end">
