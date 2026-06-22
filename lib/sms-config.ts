@@ -1,9 +1,9 @@
 /** SMS reservation line (Twilio toll-free). */
 export const SMS_RESERVATION_PHONE_E164 =
-  process.env.NEXT_PUBLIC_SMS_RESERVATION_PHONE ?? "+18776001886";
+  process.env.NEXT_PUBLIC_SMS_RESERVATION_PHONE ?? "+18776657530";
 
 export const SMS_RESERVATION_PHONE_DISPLAY =
-  process.env.NEXT_PUBLIC_SMS_RESERVATION_PHONE_DISPLAY ?? "(877) 600-1886";
+  process.env.NEXT_PUBLIC_SMS_RESERVATION_PHONE_DISPLAY ?? "(877) 665-7530";
 
 /** Keyword guests text to start a reservation conversation (case-insensitive). */
 export const SMS_RESERVE_KEYWORD = "RESERVE";
